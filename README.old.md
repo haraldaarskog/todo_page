@@ -37,3 +37,19 @@
 ## Anatomien til en komponent
 - Klasser extends Component
 - render-metode sørger for å rendre komponenten på siden. Returnerer JSX, likt HTML
+
+
+
+## index.html
+- `<div id = "root">` som ligger i index.html er hvor alt blir outputet
+- Bootstrap skal inn i index.html, samme med fontawesome
+
+## index.js
+-  Genererer det som kommer i index.html
+-  Entry point til React
+
+## App.js
+- Appen som blir loadet i index.js
+- Formet som en klasse-based component
+- Returnerer JSX
+- JSX: kan ikke bruke Class, å bruke ClassName
