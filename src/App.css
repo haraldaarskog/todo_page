@@ -17,6 +17,8 @@
 
   .container {
     padding: 0 1rem;
+    margin-right: auto;
+    margin-left: 10%
   }
   
   .btn {
@@ -30,4 +32,38 @@
   
   .btn:hover {
     background: #666;
+  }
+
+  .space { margin-top: 50px; }
+
+  nav {
+    position: sticky;
+    position: -webkit-sticky; /* For Safari */
+    top: 24px; /* How far down the page you want your ToC to live */
+  
+    /* Give table of contents a scrollbar */
+    max-height: calc(100vh - 40px);
+    overflow: auto;
+  }
+
+  a {
+    color: grey;
+    text-decoration: none;
+  }
+  
+  li.active > a {
+    color: rgb(32, 31, 31);
+  }
+  
+  li > a:hover {
+    color: rgb(32, 31, 31);
+  }
+
+
+  ul.v {
+    list-style-type: none;}
+
+  .divMargs{
+    margin-right: auto;
+    margin-left: 100px;
   }

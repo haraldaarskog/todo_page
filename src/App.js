@@ -4,8 +4,12 @@ import Header from './components/layout/Header';
 import Todos from './components/Todos';
 import AddTodo from './components/AddTodo';
 import About from './components/pages/About';
+import Home from './components/pages/Home';
 import {v4 as uuidv4} from 'uuid';
 import axios from 'axios';
+import {Container} from 'react-bootstrap';
+
+
 
 import './App.css';
 
@@ -13,6 +17,8 @@ class App extends Component {
   state = {
     todos: []
   };
+
+  
 
   componentDidMount() {
     axios
@@ -58,11 +64,13 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
-          <div className="container">
             <Header />
+            <Route exact path="/" component={Home} />
+            <Route exact path="/todo_page" component={Home} />
+            
             <Route
               exact
-              path="/"
+              path="/todo"
               render={props => (
                 <React.Fragment>
                   <AddTodo addTodo={this.addTodo} />
@@ -74,9 +82,12 @@ class App extends Component {
                 </React.Fragment>
               )}
             />
-            <Route path="/about" component={About} />
-          </div>
-        </div>
+            <Route exact path="/about" component={About} />
+            
+
+            
+            
+            </div>
       </Router>
     );
   }
